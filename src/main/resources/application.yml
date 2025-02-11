@@ -1,0 +1,29 @@
+server:
+  port: 8080
+socketio:
+  host: 192.168.31.230
+  port: 9093
+  # 设置最大每帧解决数据的长度，避免别人利用大数据来攻打服务器
+  maxFramePayloadLength: 1048576
+  # 设置http交互最大内容长度
+  maxHttpContentLength: 1048576
+  # socket连接数大小（如只监听一个端口boss线程组为1即可）
+  bossCount: 1
+  workCount: 10
+  allowCustomRequests: true
+  # 协定降级超时工夫（毫秒），默认10秒。HTTP握手降级为ws协定超时工夫
+  upgradeTimeout: 60000
+  # Ping音讯超时工夫（毫秒），默认60秒，这个工夫距离内没有接管到心跳音讯就会发送超时事件
+  pingTimeout: 60000
+  # Ping音讯距离（毫秒），默认25秒。客户端向服务器发送一条心跳音讯距离
+  pingInterval: 25000
+spring:
+  data:
+    redis:
+      host: localhost
+      port: 6379
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test?characterEncoding=UTF8
+    username: root
+    password: root
