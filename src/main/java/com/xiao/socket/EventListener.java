@@ -1,10 +1,12 @@
 package com.xiao.socket;
 
 import cn.hutool.json.JSONUtil;
+import com.alibaba.fastjson.parser.JSONToken;
 import com.corundumstudio.socketio.SocketIOClient;
 import com.corundumstudio.socketio.annotation.OnConnect;
 import com.corundumstudio.socketio.annotation.OnDisconnect;
 import com.corundumstudio.socketio.annotation.OnEvent;
+import com.fasterxml.jackson.core.JsonToken;
 import com.xiao.common.R;
 import com.xiao.domain.User;
 import com.xiao.mapper.UserMapper;

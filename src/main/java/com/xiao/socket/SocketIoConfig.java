@@ -1,7 +1,5 @@
 package com.xiao.socket;
 
-
-
 import com.corundumstudio.socketio.Configuration;
 import com.corundumstudio.socketio.SocketConfig;
 import com.corundumstudio.socketio.SocketIOServer;
@@ -11,19 +9,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-/**
- * @author: byh
- * @create: 2023/7/7
- * @Description:
- * @ClassName: SocketIoConfig
- */
 @Component
 @Slf4j
 public class SocketIoConfig implements InitializingBean {
 
     @Autowired
     private EventListener eventListener;
-
 
     @Autowired
     private ExceptionListener exceptionListener1;
