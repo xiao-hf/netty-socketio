@@ -1,4 +1,4 @@
-package com.xiao.socket;
+package com.xiao.socket.mine;
 
 import com.corundumstudio.socketio.SocketIOClient;
 import com.corundumstudio.socketio.listener.DefaultExceptionListener;
